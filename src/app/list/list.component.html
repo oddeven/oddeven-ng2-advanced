@@ -1,0 +1,18 @@
+<button (click)="clearList()"
+        class="clear">
+  Clear List
+</button>
+<div class="items">
+  <ngc-list-item *ngFor="let item of list; let i = index"
+                 [item]="item"
+                 (onRemove)="removeItem(i)">
+  </ngc-list-item>
+</div>
+<div class="create-item">
+  <input #createInput
+         class="create-input"
+         type="text"
+         placeholder="New item content...">
+  <button (click)="createItem()"
+          class="create-button">Add</button>
+</div>

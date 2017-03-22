@@ -1,0 +1,8 @@
+<h1>
+  {{title}}
+</h1>
+<ngc-list [list]="list | async"
+          (onCreateItem)="createItem($event)"
+          (onClearList)="clearList()"
+          (onRemoveItem)="removeItem($event)">
+</ngc-list>

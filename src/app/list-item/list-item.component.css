@@ -1,0 +1,21 @@
+:host {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+:host:nth-child(2n) {
+  background-color: whitesmoke;
+}
+
+.content {
+  padding-right: 10px;
+}
+
+.remove {
+  border: 0;
+  background-color: black;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+}
