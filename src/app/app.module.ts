@@ -9,6 +9,8 @@ import { ListItemComponent } from './list-item/list-item.component';
 import {StoreModule} from '@ngrx/store';
 import {list} from './reducers/list.reducer';
 
+import {StoreDevtoolsModule} from '@ngrx/store-devtools';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,10 @@ import {list} from './reducers/list.reducer';
     HttpModule,
     StoreModule.provideStore({
       list
-    }, initialAppState)
+    }, initialAppState),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 10
+    })
   ],
   bootstrap: [AppComponent]
 })
